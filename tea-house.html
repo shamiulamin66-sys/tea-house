@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea House</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .manrope-uniquifier {
+            font-family: "Manrope", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="manrope-uniquifier">
+    <!-- header -->
+    <header
+        class="container mx-auto px-4 md:px-10 lg:px-20 py-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="max-w-xl text-center lg:text-left">
+            <h1 class="text-4xl lg:text-6xl font-extrabold mb-4">
+                It's good tea time at The Tea House
+            </h1>
+            <p class="text-gray-600 mb-6">
+                Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
+            </p>
+
+            <!-- ফ্লেক্সবক্স ব্যবহার করে টেক্সট ও ইমেজ পারফেক্ট মাঝখানে আনা হয়েছে -->
+            <button
+                class="bg-gradient-to-r from-orange-500 to-red-500 px-6 py-3 rounded-lg font-semibold hover:from-red-500 hover:to-orange-500 transition duration-300 inline-flex items-center justify-center gap-2 mx-auto lg:mx-0">
+                <span>Explore More</span>
+                <img src="images/arrow.png" alt="arrow">
+            </button>
+        </div>
+
+        <!-- ব্যানার এবং রেটিং কার্ডের জন্য প্যারেন্ট ডিভে relative ব্যবহার করা হয়েছে -->
+        <div class="relative w-full max-w-md lg:max-w-none flex justify-center">
+            <img src="images/banner.png" alt="" class="w-full h-auto">
+
+            <!-- Trust Pilot Ratings কার্ডটি এখন banner.png ইমেজের ভেতরে পজিশন করা হলো -->
+            <div
+                class="flex items-center bg-white shadow-xl rounded-xl p-4 gap-3 absolute bottom-4 left-4 md:left-[-1px]">
+                <div>
+                    <img src="images/Vector.png" alt="">
+                </div>
+                <div>
+                    <h2 class="font-bold text-xl">5.00</h2>
+                    <p class="text-gray-500 text-sm">Trust Pilot Ratings</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- our featured products -->
+    <main>
+        <div class="container mx-auto px-4 md:px-10 lg:px-20 py-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Our Featured Products</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration
+                in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+        </div>
+        <section
+            class="container mx-auto px-4 md:px-10 lg:px-20 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
+                <div class="bg-gray-100 rounded-xl p-4 flex justify-center mb-4">
+                    <img src="images/tea-1.png" alt="">
+                </div>
+                <h1 class="text-2xl font-bold mb-2">Milk Tea</h1>
+                <p class="text-gray-600">Creamer could be replaced by fresh milk</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
+                <div class="bg-gray-100 rounded-xl p-4 flex justify-center mb-4">
+                    <img src="images/tea-2.png" alt="">
+                </div>
+                <h1 class="text-2xl font-bold mb-2">Black Tea</h1>
+                <p class="text-gray-600">Creamer could be replaced by fresh milk</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
+                <div class="bg-gray-100 rounded-xl p-4 flex justify-center mb-4">
+                    <img src="images/tea-3.png" alt="">
+                </div>
+                <h1 class="text-2xl font-bold mb-2">Lemon Tea</h1>
+                <p class="text-gray-600">Creamer could be replaced by fresh milk</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
+                <div class="bg-gray-100 rounded-xl p-4 flex justify-center mb-4">
+                    <img src="images/tea-4.png" alt="">
+                </div>
+                <h1 class="text-2xl font-bold mb-2">Green Tea</h1>
+                <p class="text-gray-600">Creamer could be replaced by fresh milk</p>
+            </div>
+        </section>
+    </main>
+    <!-- Great tea section -->
+    <section class="mb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto ">
+        <!-- Main Grid: Mobile (1 Col) -> Desktop (2 Cols) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+            <!-- Image Grid Section -->
+            <!-- grid-rows-3 এর বদলে grid-rows-2 এবং auto-rows দিয়ে সমান রেশিও (Aspect-Square) দেওয়া হয়েছে -->
+            <div class="grid grid-cols-2 gap-2 sm:gap-4 w-full max-w-lg lg:max-w-none mx-auto">
+
+                <!-- 1. Red Gradient Box (Row 1, Col 1) -->
+                <div class="h-32 bg-gradient-to-r from-red-100 to-red-50 rounded-xl"></div>
+
+                <!-- 2. First Image Box (Row 1 to 2, Col 2) -->
+                <div
+                    class="bg-orange-50 rounded-2xl row-span-2 flex items-center justify-center p-4 sm:p-6 w-full h-full shadow-sm hover:shadow-md transition-shadow">
+                    <img class="max-w-full max-h-48 sm:max-h-64 object-contain" src="images/fresh-1.png"
+                        alt="Fresh Tea 1">
+                </div>
+
+                <!-- 3. Second Image Box (Row 2 to 3, Col 1) -->
+                <div
+                    class="bg-stone-100 rounded-2xl row-span-2 flex items-center justify-center p-4 sm:p-6 w-full h-full shadow-sm hover:shadow-md transition-shadow">
+                    <img class="max-w-full max-h-48 sm:max-h-64 object-contain" src="images/fresh-2.png"
+                        alt="Fresh Tea 2">
+                </div>
+
+                <!-- 4. Red Gradient Box (Row 3, Col 2) -->
+                <div class="h-32 bg-gradient-to-r from-stone-200 to-red-100 rounded-xl"></div>
+
+            </div>
+
+            <!-- Text Section -->
+            <div class="space-y-4 sm:space-y-6 text-center lg:text-left mt-6 lg:mt-0">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    Great Tea, Freshly Presented
+                </h1>
+
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    The meaning of Gong Cha in Chinese is to provide the best tea to the emperor from all possessions.
+                    It represents the highest quality and self-expectation. Established in 2006, Gong Cha has been
+                    deeply appreciated by its customers because of good word of mouth and unique customized service
+                    originating from Taiwan.
+                </p>
+
+                <div class="pt-2">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">Unique Taste</h2>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        A unique and different style from other teapots gives a luxurious and minimalist impression.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">Premium Quality</h2>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Premium quality that makes tea more elegant and more durable when you use it.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Reviews Section -->
+    <section class="mb-24 px-4 container mx-auto">
+        <div
+            class="bg-gradient-to-t from-orange-500 to-red-500 rounded-2xl grid grid-cols-1 lg:grid-cols-2 text-white p-6 sm:p-10 lg:p-16 items-center gap-10 overflow-hidden">
+
+            <!-- Text section -->
+            <div class="w-full lg:w-11/12 space-y-5 text-center lg:text-left">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                    Meet Our Super Clients
+                </h1>
+                <p class="text-white/90 text-sm sm:text-base leading-relaxed">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.
+                </p>
+                <button
+                    class="bg-white text-orange-600 hover:bg-orange-100 font-bold py-3 px-6 rounded-lg transition-colors shadow-md">
+                    Show All
+                </button>
+            </div>
+
+            <!-- Reviews card section -->
+            <div class="relative py-6 lg:py-16 flex flex-col items-center justify-center">
+
+                <!-- 1. Top Card (মোবাইলে লুকানো থাকবে `hidden lg:block` দিয়ে) -->
+                <div
+                    class="hidden lg:block relative lg:absolute lg:-top-6 lg:right-0 z-10 w-full lg:w-4/5 bg-white text-black rounded-xl p-6 shadow-lg opacity-40">
+                    <!-- Avatar image overlay -->
+                    <div class="absolute -top-5 -left-4 border-4 border-white rounded-full bg-white shadow-md">
+                        <img class="w-12 h-12 rounded-full object-cover" src="images/client.png" alt="Client">
+                    </div>
+
+                    <!-- Review Content -->
+                    <div class="space-y-2 pt-2">
+                        <p class="text-gray-500 text-xs sm:text-sm">We are providing the best and suitable home
+                            insurance services for the people who are interested to treatment</p>
+                        <h3 class="text-lg font-bold text-gray-900">Ilham Yuda</h3>
+                        <p class="text-xs text-gray-500 font-medium">Businessman</p>
+                    </div>
+                </div>
+
+                <!-- 2. Middle Main Card (মোবائل ও ডেস্কটপ সব ডিভাইসে থাকবে) -->
+                <div
+                    class="relative z-30 w-full lg:w-4/5 bg-white text-black rounded-xl p-6 shadow-2xl lg:-translate-x-12 lg:my-6 border-2 border-orange-100">
+                    <!-- Avatar image overlay -->
+                    <div class="absolute -top-6 -left-5 border-4 border-white rounded-full bg-white shadow-lg">
+                        <img class="w-14 h-14 rounded-full object-cover" src="images/client.png" alt="Client">
+                    </div>
+
+                    <!-- Review Content -->
+                    <div class="space-y-2 pt-2">
+                        <p class="text-gray-600 text-sm leading-relaxed">We are providing the best and suitable home
+                            insurance services for the people who are interested to treatment</p>
+                        <h2 class="text-xl font-bold text-gray-900">Ilham Yuda</h2>
+                        <p class="text-xs text-gray-500 font-semibold">Businessman</p>
+                    </div>
+                </div>
+
+                <!-- 3. Bottom Card (মোবাইলে লুকানো থাকবে `hidden lg:block` দিয়ে) -->
+                <div
+                    class="hidden lg:block relative lg:absolute lg:-bottom-6 lg:right-0 z-10 w-full lg:w-4/5 bg-white text-black rounded-xl p-6 shadow-lg opacity-40">
+                    <!-- Avatar image overlay -->
+                    <div class="absolute -top-5 -left-4 border-4 border-white rounded-full bg-white shadow-md">
+                        <img class="w-12 h-12 rounded-full object-cover" src="images/client.png" alt="Client">
+                    </div>
+
+                    <!-- Review Content -->
+                    <div class="space-y-2 pt-2">
+                        <p class="text-gray-500 text-xs sm:text-sm">We are providing the best and suitable home
+                            insurance services for the people who are interested to treatment</p>
+                        <h3 class="text-lg font-bold text-gray-900">Ilham Yuda</h3>
+                        <p class="text-xs text-gray-500 font-medium">Businessman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-10">
+            <div class="text-center mb-10">
+                <h1 class="text-5xl font-bold mb-4">News & Events</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.
+                </p>
+            </div>
+
+            <!-- News Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="border border-gray-200 rounded-xl p-5 shadow-lg bg-white flex flex-col justify-between">
+                    <img class="w-full rounded-lg mb-4 object-cover" src="images/news-1.png" alt="News Image">
+                    <div class="space-y-2">
+                        <small class="text-gray-500 font-medium">Feb 05, 2027</small>
+                        <h2 class="text-2xl font-bold text-gray-800">Collecting 8 points for discount</h2>
+                        <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available.</p>
+                        <a href="#" class="inline-block text-xl font-bold text-gray-600 pt-2 hover:underline">Learn
+                            More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="border border-gray-200 rounded-xl p-5 shadow-lg bg-white flex flex-col justify-between">
+                    <img class="w-full rounded-lg mb-4 object-cover" src="images/news-2.png" alt="News Image">
+                    <div class="space-y-2">
+                        <small class="text-gray-500 font-medium">Feb 05, 2027</small>
+                        <h2 class="text-2xl font-bold text-gray-800">Collecting 8 points for discount</h2>
+                        <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available.</p>
+                        <a href="#" class="inline-block text-xl font-bold text-gray-600 pt-2 hover:underline">Learn
+                            More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="border border-gray-200 rounded-xl p-5 shadow-lg bg-white flex flex-col justify-between">
+                    <img class="w-full rounded-lg mb-4 object-cover" src="images/news-3.png" alt="News Image">
+                    <div class="space-y-2">
+                        <small class="text-gray-500 font-medium">Feb 05, 2027</small>
+                        <h2 class="text-2xl font-bold text-gray-800">Collecting 8 points for discount</h2>
+                        <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available.</p>
+                        <a href="#" class="inline-block text-xl font-bold text-gray-600 pt-2 hover:underline">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <!-- News Section -->
+
+    <!-- Footer Section -->
+   <footer class="bg-orange-100 text-gray-700 py-12 px-4 md:px-16">
+    <div class="w-11/12 md:w-9/12 mx-auto">
+        <!-- Top Section: Logo & CTA -->
+        <div class="mb-10 flex flex-col md:flex-row justify-between items-center gap-6 border-b border-orange-200 pb-8">
+            <img class="h-12 w-auto" src="images/cup.png" alt="Logo">
+            
+            <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                <h4 class="text-xl md:text-2xl text-gray-700 font-medium">Ready to get started?</h4>
+                <button class="text-white bg-gradient-to-r from-orange-500 to-red-500 px-6 py-3 rounded-lg font-semibold hover:from-red-500 hover:to-orange-500 transition duration-300 shadow-md">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Links Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1 -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-bold text-gray-800">Quick Links</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Home</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">About Us</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Insurance</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-bold text-gray-800">Our Service</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Life Insurance</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Car Insurance</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Health Insurance</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">House Insurance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-bold text-gray-800">Help</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">FAQs</a></li>
+                    <li><a href="#" class="hover:text-orange-600 transition duration-200">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div class="space-y-4">
+                <h4 class="text-xl font-bold text-gray-800">Subscribe to our newsletter</h4>
+                <div class="flex flex-col gap-3">
+                    <input type="email" placeholder="Email address" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white">
+                    <button class="bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition duration-200">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-12 pt-6 text-center text-gray-500 text-sm border-t border-orange-200">
+            <p>© 2027 UIDesign.to - All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
